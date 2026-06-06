@@ -5,10 +5,17 @@ A next-generation AI-powered HRMS that automates resume screening, interview ana
 
 ## HR & Admin Modules
 FeatureWhat it does Multi-Role AuthenticationAdmin, Senior Manager, HR Recruiter, Employee — each with protected routes and personalised dashboards
-Role Management: Admins assign/change employee roles with a single click — promoted employees instantly see the Manager dashboardTeam AllocationAdmins create teams, assign a manager, and allocate employees — managers see their exact team on their dashboard
+
+Role Management: Admins assign/change employee roles with a single click — promoted employees instantly see the Manager dashboard
+
+Team AllocationAdmins create teams, assign a manager, and allocate employees — managers see their exact team on their dashboard
+
 Employee Management Full CRUD — add, edit, soft-delete employees with auto-generated IDs
+
 Attendance Tracking One-click check-in/check-out, monthly calendar view, admin attendance reportsPayroll GenerationAuto-generate monthly payroll for all active employees, downloadable payslips
+
 Performance ReviewsQuarterly ratings across 5 dimensions with radar charts and team comparison
+
 Personalised DashboardsEach role sees only their relevant data — no information leakage across roles
 
 ## Getting Started
