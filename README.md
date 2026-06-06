@@ -7,36 +7,6 @@ FeatureWhat it doesBulk Resume ScreeningUpload up to 10 PDFs → AI ranks candid
 ## HR & Admin Modules
 FeatureWhat it doesMulti-Role AuthenticationAdmin, Senior Manager, HR Recruiter, Employee — each with protected routes and personalised dashboardsRole ManagementAdmins assign/change employee roles with a single click — promoted employees instantly see the Manager dashboardTeam AllocationAdmins create teams, assign a manager, and allocate employees — managers see their exact team on their dashboardEmployee ManagementFull CRUD — add, edit, soft-delete employees with auto-generated IDs (EMP001, EMP002...)Attendance TrackingOne-click check-in/check-out, monthly calendar view, admin attendance reportsPayroll GenerationAuto-generate monthly payroll for all active employees, downloadable payslipsPerformance ReviewsQuarterly ratings across 5 dimensions with radar charts and team comparisonPersonalised DashboardsEach role sees only their relevant data — no information leakage across roles
 
-## System Architecture
-┌─────────────────────────────────────────────────────────────┐
-│                     React 18 Frontend                        │
-│         Role-based routing · Axios · Recharts · Tailwind     │
-└──────────────────────────┬──────────────────────────────────┘
-                           │  JWT-authenticated REST API
-┌──────────────────────────▼──────────────────────────────────┐
-│                   Node.js + Express                          │
-│                                                              │
-│   /auth  /employees  /attendance  /payroll  /performance     │
-│   /resume  /interview  /onboarding  /analytics               │
-│   /roles  /teams  /policies  /chatbot                        │
-│                                                              │
-│   ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────┐  │
-│   │JWT Auth  │  │  Multer  │  │pdf-parse │  │  OpenAI   │  │
-│   │Middleware│  │ Uploads  │  │ Extract  │  │  gpt-4o   │  │
-│   └──────────┘  └──────────┘  └──────────┘  └─────┬─────┘  │
-└────────────────────────────────────────────────────┼────────┘
-                           │                         │
-          ┌────────────────▼──────┐     ┌────────────▼──────────┐
-          │     MongoDB Atlas     │     │     OpenAI API         │
-          │                       │     │                        │
-          │  Users · Employees    │     │  Resume screening      │
-          │  Attendance · Payroll │     │  Interview analysis    │
-          │  Candidates           │     │  Onboarding plans      │
-          │  Interviews           │     │  Policy Q&A (RAG)      │
-          │  Onboarding           │     │  Question generation   │
-          │  Performance          │     └────────────────────────┘
-          │  Teams · Policies     │
-          └───────────────────────┘
 ## Getting Started
 Prerequisites
 
