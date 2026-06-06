@@ -2,10 +2,14 @@
 A next-generation AI-powered HRMS that automates resume screening, interview analysis, onboarding, team allocation, and HR policy Q&A.
 
 ## Features
-## AI-Powered Modules
-FeatureWhat it doesBulk Resume ScreeningUpload up to 10 PDFs → AI ranks candidates by technical score, communication score, skill match, and hire recommendation in under 30 secondsAI Interview AnalysisPaste interview transcript → AI scores clarity, confidence, relevance, communication → verdict: Strong Hire / Hire / Maybe / No HireAI Onboarding GeneratorSelect employee → AI generates personalised 4-week onboarding plan with tasks, resources, and milestonesHR Policy Chatbot (RAG)Employees ask HR questions in plain English → AI retrieves relevant company policies and answers accurately
+
 ## HR & Admin Modules
-FeatureWhat it doesMulti-Role AuthenticationAdmin, Senior Manager, HR Recruiter, Employee — each with protected routes and personalised dashboardsRole ManagementAdmins assign/change employee roles with a single click — promoted employees instantly see the Manager dashboardTeam AllocationAdmins create teams, assign a manager, and allocate employees — managers see their exact team on their dashboardEmployee ManagementFull CRUD — add, edit, soft-delete employees with auto-generated IDs (EMP001, EMP002...)Attendance TrackingOne-click check-in/check-out, monthly calendar view, admin attendance reportsPayroll GenerationAuto-generate monthly payroll for all active employees, downloadable payslipsPerformance ReviewsQuarterly ratings across 5 dimensions with radar charts and team comparisonPersonalised DashboardsEach role sees only their relevant data — no information leakage across roles
+FeatureWhat it does Multi-Role AuthenticationAdmin, Senior Manager, HR Recruiter, Employee — each with protected routes and personalised dashboards
+Role Management: Admins assign/change employee roles with a single click — promoted employees instantly see the Manager dashboardTeam AllocationAdmins create teams, assign a manager, and allocate employees — managers see their exact team on their dashboard
+Employee Management Full CRUD — add, edit, soft-delete employees with auto-generated IDs
+Attendance Tracking One-click check-in/check-out, monthly calendar view, admin attendance reportsPayroll GenerationAuto-generate monthly payroll for all active employees, downloadable payslips
+Performance ReviewsQuarterly ratings across 5 dimensions with radar charts and team comparison
+Personalised DashboardsEach role sees only their relevant data — no information leakage across roles
 
 ## Getting Started
 Prerequisites
