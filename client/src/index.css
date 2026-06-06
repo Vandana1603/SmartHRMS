@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* Global Dark Mode Overrides */
+html.dark body {
+  @apply bg-slate-950 text-slate-100 transition-colors duration-300;
+}
+html.dark .bg-white {
+  @apply bg-slate-900 border-slate-800/80 text-slate-100 shadow-none !important;
+}
+
+html.dark .bg-slate-50 {
+  @apply bg-slate-800/50 text-slate-200 !important;
+}
+
+html.dark .text-slate-900 {
+  @apply text-slate-100 !important;
+}
+
+html.dark .text-slate-800 {
+  @apply text-slate-200 !important;
+}
+
+html.dark .text-slate-700 {
+  @apply text-slate-300 !important;
+}
+
+html.dark .text-slate-600 {
+  @apply text-slate-300 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  @apply border-slate-800/80 !important;
+}
+
+html.dark .divide-slate-100,
+html.dark .divide-slate-200 {
+  @apply divide-slate-800/80 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  @apply bg-slate-800 border-slate-700 text-white placeholder-slate-500 focus:ring-blue-500 !important;
+}
+
+html.dark .hover:bg-slate-50:hover {
+  @apply bg-slate-800/30 !important;
+}
+
+html.dark .bg-blue-50 {
+  @apply bg-blue-900/20 text-blue-300 border-blue-900/30 !important;
+}
+
+html.dark .bg-green-50 {
+  @apply bg-green-900/20 text-green-300 border-green-900/30 !important;
+}
+
+html.dark .bg-red-50 {
+  @apply bg-red-900/20 text-red-300 border-red-900/30 !important;
+}
+
+html.dark .bg-amber-50 {
+  @apply bg-amber-900/20 text-amber-300 border-amber-900/30 !important;
+}
+
+html.dark .shadow-sm {
+  @apply shadow-none !important;
+}
+
+/* Dark Mode Button Fixes - Ensure text visibility on focus/active */
+html.dark button {
+  @apply text-slate-100 !important;
+  color: inherit !important;
+}
+
+html.dark button:hover,
+html.dark button:focus,
+html.dark button:focus-visible,
+html.dark button:active {
+  @apply text-slate-100 !important;
+  color: inherit !important;
+}
+
+html.dark button[type="submit"],
+html.dark button[type="button"] {
+  @apply text-white !important;
+  color: inherit !important;
+}
+
+html.dark button[type="submit"]:hover,
+html.dark button[type="submit"]:focus,
+html.dark button[type="submit"]:active,
+html.dark button[type="button"]:hover,
+html.dark button[type="button"]:focus,
+html.dark button[type="button"]:active {
+  @apply text-white !important;
+  color: inherit !important;
+}
+
+/* Prevent text color override on focus ring */
+html.dark .focus\:ring-2:focus,
+html.dark .focus\:ring-offset-2:focus {
+  color: inherit !important;
+}
+
+/* Button text in various button-like elements */
+html.dark [role="button"] {
+  @apply text-slate-100 !important;
+}
+
+html.dark [role="button"]:focus,
+html.dark [role="button"]:hover {
+  color: inherit !important;
+}

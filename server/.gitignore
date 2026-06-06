@@ -1,0 +1,12 @@
+client\node_modules
+client\.env
+server\node_modules
+server\.env
+dist
+build
+logs
+*.log
+coverage
+*.env
+node_modules
+.env
